@@ -1,13 +1,13 @@
-=== bS5 Share Buttons ===
+=== bS Share Buttons ===
 
 Contributors: craftwerk
 
 Requires at least: 4.5
-Tested up to: 5.5.1
+Tested up to: 5.8.1
 Requires PHP: 5.6
 Stable tag: 5.0.0
-License: GNU General Public License v2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
+License: GNU MIT License
+License URI: https://github.com/bootscore/bs5-share-buttons/blob/main/LICENSE
 
 Displays share buttons in bootScore WordPress Theme, Copyright 2020 Bastian Kreiter.
 
