@@ -3,9 +3,9 @@
 Plugin URI: https://bootscore.me/plugins/bs-share-buttons/
 Description: Share Buttons for bootScore theme https://bootscore.me. Use Shortcode [bs-share-buttons] to display buttons in content or widget. Use <?php echo do_shortcode("[bs-share-buttons]"); ?&gt; to display in .php files.
 Version: 5.0.0
-Author: Bastian Kreiter
-Author URI: https://crftwrk.de
-License: GPLv2
+Author: bootScore
+Author URI: https://bootscore.me
+License: MIT License
 Text Domain: bootscore
 */
 
