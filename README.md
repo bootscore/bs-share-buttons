@@ -36,5 +36,7 @@ Remove buttons you do not want to show directly in main.php line 77 to 89 by del
 - `.btn-mail`
 - `.btn-print
 
+## License & Credits
+
 - bS Share Buttons, MIT License https://github.com/bootscore/bs-share-buttons/blob/main/LICENSE
 
