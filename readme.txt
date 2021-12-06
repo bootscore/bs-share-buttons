@@ -6,7 +6,7 @@ Requires at least: 4.5
 Tested up to: 5.8.1
 Requires PHP: 5.6
 Stable tag: 5.0.0
-License: GNU MIT License
+License: MIT License
 License URI: https://github.com/bootscore/bs5-share-buttons/blob/main/LICENSE
 
 Displays share buttons in bootScore WordPress Theme, Copyright 2020 Bastian Kreiter.
