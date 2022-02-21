@@ -77,7 +77,7 @@ function bs_share_buttons($content) {
         $content .= '<a class="mb-1 btn btn-sm btn-linkedin" title="LinkedIn" href="'.$linkedInURL.'" target="_blank" rel="nofollow"><i class="fa-brands fa-linkedin-in"></i></a> ';
         $content .= '<a class="mb-1 btn btn-sm btn-reddit" title="Reddit" href="'.$redditURL.'" target="_blank" rel="nofollow"><i class="fa-brands fa-reddit-alien"></i></a> '; 
         $content .= '<a class="mb-1 btn btn-sm btn-tumblr" title="Tumblr" href="'.$tumblrURL.'" target="_blank" rel="nofollow"><i class="fa-brands fa-tumblr"></i></a> ';
-        $content .= '<a class="mb-1 btn btn-sm btn-buffer" title="Buffer" href="'.$bufferURL.'" target="_blank" rel="nofollow"><i class="fab fa-buffer"></i></a> ';
+        $content .= '<a class="mb-1 btn btn-sm btn-buffer" title="Buffer" href="'.$bufferURL.'" target="_blank" rel="nofollow"><i class="fa-brands fa-buffer"></i></a> ';
         $content .= '<a class="mb-1 btn btn-sm btn-mix" title="mix" href="'.$mixURL.'" target="_blank" rel="nofollow"><i class="fa-brands fa-mix"></i></a> ';
         $content .= '<a class="mb-1 btn btn-sm btn-vk" title="vk" href="'.$vkURL.'" target="_blank" rel="nofollow"><i class="fa-brands fa-vk"></i></a> ';
         $content .= '<a class="mb-1 btn btn-sm btn-mail btn-dark" title="Mail" href="'.$mailURL.'"><i class="fa-solid fa-envelope"></i></a> ';
