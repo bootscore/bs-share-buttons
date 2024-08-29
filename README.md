@@ -1,3 +1,7 @@
+> [!IMPORTANT]  
+> This plugin has reached its end of life (EOL) and will no longer receive updates.
+
+
 # bs Share Buttons
 
 WordPress plugin to show share buttons in pages, posts, widgets or .php files.
