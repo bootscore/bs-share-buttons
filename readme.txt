@@ -1,13 +1,13 @@
-=== bS Share Buttons ===
+=== bs Share Buttons ===
 
 Contributors: craftwerk
 
-Requires at least: 4.5
-Tested up to: 5.8.1
-Requires PHP: 5.6
-Stable tag: 5.0.0
+Stable tag: 1.0.1
+Tested up to: 6.6
+Requires at least: 5.0
+Requires PHP: 7.4
 License: MIT License
-License URI: https://github.com/bootscore/bs5-share-buttons/blob/main/LICENSE
+License URI: https://github.com/bootscore/bs-share-buttons/blob/main/LICENSE
 
 Displays share buttons in bootScore WordPress Theme, Copyright 2020 Bastian Kreiter.
 
@@ -45,6 +45,10 @@ Remove buttons you do not want to display directly in main.php line 77 to 89 by 
 
 == Changelog ==
 
-    = 1.0.0 - January 02 2021 =
+= 1.0.1 - August 29 2024 =
     
-        * Initial release
+* Fix return Array
+
+= 1.0.0 - January 02 2021 =
+    
+* Initial release
