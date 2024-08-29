@@ -1,4 +1,4 @@
-# bS Share Buttons
+# bs Share Buttons
 
 WordPress plugin to show share buttons in pages, posts, widgets or .php files.
 
