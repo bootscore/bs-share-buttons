@@ -1,8 +1,11 @@
 <?php
-/*Plugin Name: bS Share Buttons
+/*Plugin Name: bs Share Buttons
 Plugin URI: https://bootscore.me/plugins/bs-share-buttons/
 Description: Share Buttons for bootScore theme https://bootscore.me. Use Shortcode [bs-share-buttons] to display buttons in content or widget. Use <?php echo do_shortcode("[bs-share-buttons]"); ?&gt; to display in .php files.
-Version: 5.2.0
+Version: 1.0.1
+Tested up to: 6.6
+Requires at least: 5.0
+Requires PHP: 7.4
 Author: bootScore
 Author URI: https://bootscore.me
 License: MIT License
@@ -25,9 +28,9 @@ add_action('wp_enqueue_scripts','bs_share_buttons_scripts');
 
 
 
+
 // Function to handle the thumbnail request
-function get_the_post_thumbnail_src($img)
-{
+function get_the_post_thumbnail_src($img) {
   return (preg_match('~\bsrc="([^"]++)"~', $img, $matches)) ? $matches[1] : '';
 }
 function bs_share_buttons($content) {
@@ -85,7 +88,7 @@ function bs_share_buttons($content) {
         $content .= '</div>';
         
         return $content;
-    }else{
+    } else{
         // if not a post/page then don't include sharing button
         return $content;
     }
@@ -94,3 +97,37 @@ function bs_share_buttons($content) {
 
 // This will create a wordpress shortcode [share-buttons].
 add_shortcode('bs-share-buttons','bs_share_buttons');
+
+
+// Roughly fix https://github.com/bootscore/bs-share-buttons/issues/3
+function bs_share_buttons_inline_script() {
+    // Ensure jQuery is enqueued
+    wp_enqueue_script('jquery');
+    
+    // Define the inline script
+    $inline_script = "
+    jQuery(document).ready(function($) {
+        // Function to recursively search and remove unwanted text nodes
+        function removeTextNodesWithText(node, textToRemove) {
+            $(node).contents().each(function() {
+                if (this.nodeType === 3) { // Text node
+                    var text = $.trim(this.textContent);
+                    if (text === textToRemove) {
+                        $(this).remove(); // Remove text node
+                    }
+                } else if (this.nodeType === 1) { // Element node
+                    removeTextNodesWithText(this, textToRemove); // Recur for child nodes
+                }
+            });
+        }
+
+        // Call the function to remove 'Array' text nodes
+        removeTextNodesWithText($('body'), 'Array');
+    });
+    ";
+
+    // Add the inline script
+    wp_add_inline_script('jquery', $inline_script);
+}
+
+add_action('wp_enqueue_scripts', 'bs_share_buttons_inline_script');
